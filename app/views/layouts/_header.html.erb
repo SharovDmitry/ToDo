@@ -1,0 +1,9 @@
+<div class="container">
+  <% if user_signed_in? %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'pull-right td-logout-link' %>
+  <% end %>
+  <div class="page-header text-center">
+    <h1><strong>SIMPLE TODO LISTS</strong></h1>
+    <h3>SECONDARY TEXT</h3>
+  </div>
+</div>

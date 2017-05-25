@@ -1,0 +1,136 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  background-image: linear-gradient(#489487, #e9c682);
+  background-attachment: fixed;
+  margin-bottom: 40px;
+  min-width: 500px;
+}
+
+// Header & footer
+
+.page-header{
+  margin-bottom: 10px;
+  border: none;
+  h3{ margin-top: 0; }
+}
+
+.td-logout-link{
+  margin-top: 20px;
+  color: #fff
+}
+
+.td-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+}
+
+// end
+
+.panel{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .panel-heading{
+    border-radius: 0;
+    .glyphicon-calendar{ margin-right: 10px; }
+    .panel-title{
+      height: 25px;
+      span{ vertical-align: middle; }
+    }
+  }
+  .panel-heading:hover .td-options{ display: block; }
+  .panel-body{
+    padding: 0;
+    td{ vertical-align: middle; }
+  }
+}
+
+.td-name{ margin-left: 10px; }
+
+.td-edit-input{
+  display: inline-block;
+  width: 75%;
+  height: 25px;
+}
+
+.td-options{
+  display: none;
+  .glyphicon{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .glyphicon-trash{ margin-right: 10px; }
+}
+
+.td-new-task{
+  background-color: $gray-lighter;
+  padding: 10px;
+}
+
+.td-tasks-table{
+  margin-bottom: 0;
+  tr:hover{
+    background-color: $state-warning-bg;
+    .td-options{ display: block; }
+  }
+  tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+  tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+}
+
+.td-task-done{
+  text-align: center;
+  border-right: double 4px #ddd;
+}
+
+.td-task-name{
+  .td-edit-input{ width: 100% }
+}
+
+.td-task-deadline{
+  border-right: 1px solid #ddd;
+}
+
+.td-completed-task{ text-decoration: line-through; }
+
+.td-add-project-icon{ margin-right: 10px; }
+
+// Sortable
+
+.ui-sortable-helper {
+  display: table;
+  border: 1px solid #ddd;
+}
+
+.td-sort-placeholder{ background-color: $gray-lighter; }
+
+// end
+
+// Datepicker
+
+.td-datepicker{
+    height: 25px;
+    font-size: x-small;
+    color: $brand-danger;
+}
+
+// end
+
+// Errors
+
+.error{ color: $brand-danger; }
+
+.tooltip.bottom .tooltip-inner { background-color: $brand-danger; }
+
+.tooltip.bottom .tooltip-arrow { border-bottom-color: $brand-danger; }
+
+.td-empty-field-error{ border-color: $brand-danger !important; }
+
+// end

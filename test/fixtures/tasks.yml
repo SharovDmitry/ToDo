@@ -1,0 +1,23 @@
+task_one:
+  id: 1
+  name: "Test Task"
+  project_id: 1
+  position: 1
+
+task_two:
+  id: 2
+  name: "Test Task 2"
+  project_id: 1
+  position: 2
+
+task_three:
+  id: 3
+  name: "Test Task 3"
+  project_id: 1
+  position: 3
+
+task_four:
+  id: 4
+  name: "Test Task 4"
+  project_id: 1
+  position: 4

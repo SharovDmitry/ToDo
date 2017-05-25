@@ -1,0 +1,38 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <h1 class="text-center">Log in</h1>
+  <hr>
+  <% if !alert.nil? %>
+      <div class="alert alert-danger">
+        <a href="#" data-dismiss="alert" class="close">×</a>
+        <ul>
+          <li>
+            <%= alert.html_safe %>
+          </li>
+        </ul>
+      </div>
+  <% end %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group">
+      <%= f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control', maxlength: 100 %>
+    </div>
+
+    <div class="form-group">
+      <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control', maxlength: 100 %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="form-group">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
+
+    <div class="form-group">
+        <%= f.submit "Log in", class: "btn btn-primary btn-block btn-lg" %>
+    </div>
+  <% end %>
+    <div class="text-center">
+      <%= render "devise/shared/links" %>
+    </div>
+</div>
+
